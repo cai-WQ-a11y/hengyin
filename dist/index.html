@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HENLYTE connects outdoor lighting project requirements with customizable product solutions.">
+  <title>HENLYTE | Outdoor Lighting for Project Requirements</title>
+  <style>
+    :root { --blue:#10358e; --sky:#138ad1; --orange:#f59a18; --ink:#10213b; --muted:#5f6d82; --paper:#f5f8fc; --line:#dce4ef; --white:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--white); font:16px/1.6 Arial,Helvetica,sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--orange); outline-offset:3px; }
+    .wrap { width:min(1140px, calc(100% - 40px)); margin:auto; }
+    header { position:sticky; top:0; z-index:5; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
+    .bar { min-height:74px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.06em; color:var(--blue); }
+    .mark { width:34px; height:34px; border-radius:50%; background:conic-gradient(from 210deg,var(--blue),var(--sky) 37%,var(--orange) 38% 61%,var(--blue) 62%); position:relative; }
+    .mark:after { content:""; position:absolute; width:22px; height:7px; border-radius:6px; background:#fff; transform:rotate(-22deg); top:14px; left:6px; }
+    nav { display:flex; align-items:center; gap:19px; font-size:14px; font-weight:700; color:#304260; }
+    nav a:hover { color:var(--blue); }
+    .button { display:inline-block; background:var(--orange); color:#172238; padding:12px 20px; border-radius:4px; font-weight:800; box-shadow:0 7px 18px rgba(245,154,24,.23); }
+    .button:hover { filter:brightness(.96); }
+    .hero { overflow:hidden; position:relative; min-height:580px; display:grid; align-items:center; background:linear-gradient(115deg,#071b48 0%,#10358e 54%,#167dbb 100%); color:white; }
+    .hero:after { content:""; position:absolute; right:-14vw; bottom:-35vw; width:73vw; height:73vw; border:1px solid rgba(255,255,255,.18); border-radius:50%; box-shadow:0 0 0 72px rgba(255,255,255,.05),0 0 0 145px rgba(255,255,255,.04); }
+    .hero-copy { position:relative; z-index:1; max-width:700px; padding:86px 0; }
+    .eyebrow { margin:0 0 14px; color:#ffd47e; letter-spacing:.14em; font-weight:800; font-size:12px; text-transform:uppercase; }
+    h1,h2,h3 { line-height:1.12; margin:0; }
+    h1 { font-size:clamp(42px,6vw,76px); letter-spacing:-.04em; }
+    .hero p:not(.eyebrow) { max-width:620px; margin:24px 0 33px; font-size:clamp(18px,2.2vw,22px); color:#dceaff; }
+    section { padding:88px 0; }
+    .intro { max-width:680px; }
+    h2 { font-size:clamp(31px,4vw,48px); letter-spacing:-.035em; }
+    .intro p { color:var(--muted); margin:18px 0 0; font-size:18px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:38px; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:27px; background:#fff; min-height:190px; }
+    .num { color:var(--orange); font-weight:800; font-size:13px; letter-spacing:.08em; }
+    .card h3 { margin:12px 0 9px; font-size:21px; }
+    .card p { margin:0; color:var(--muted); }
+    .band { background:var(--paper); }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start; }
+    .list { margin:31px 0 0; padding:0; list-style:none; display:grid; gap:0; border-top:1px solid var(--line); }
+    .list li { padding:15px 0; border-bottom:1px solid var(--line); display:flex; gap:13px; align-items:baseline; font-weight:700; }
+    .list li:before { content:"↗"; color:var(--orange); font-weight:900; }
+    .quote { padding:34px; border-left:5px solid var(--orange); background:#fff; font-size:clamp(22px,3vw,32px); font-weight:800; line-height:1.25; }
+    .small { color:var(--muted); font-size:15px; margin-top:18px; }
+    .contact { background:var(--ink); color:#fff; }
+    .contact .split { align-items:center; }
+    .contact p:not(.eyebrow) { margin:18px 0 0; color:#c8d5e8; max-width:540px; font-size:18px; }
+    footer { background:#07152e; color:#aebcd1; padding:28px 0; font-size:14px; }
+    footer .bar { min-height:auto; }
+    @media (max-width:800px) { nav a:not(.button) { display:none; } .grid { grid-template-columns:1fr; } .split { grid-template-columns:1fr; gap:35px; } section { padding:64px 0; } .hero { min-height:520px; } }
+    @media (max-width:420px) { .wrap { width:min(100% - 30px,1140px); } .brand { font-size:14px; } .button { padding:10px 13px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="#home" aria-label="HENLYTE home"><span class="mark" aria-hidden="true"></span><span>HENLYTE <small>恒银路灯</small></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#products">Products</a><a href="#solutions">Solutions</a><a href="#custom">OEM &amp; ODM</a><a href="#knowledge">Knowledge</a><a href="#about">About</a><a class="button" href="#contact">Talk to us</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-copy"><p class="eyebrow">HENLYTE · Outdoor lighting</p><h1>Built around your project requirements.</h1><p>Outdoor lighting, light-pole and solar-lighting requirements brought together in a clear, practical starting point for project teams and procurement professionals.</p><a class="button" href="#contact">Share your project requirements</a></div>
+    </section>
+    <section id="products"><div class="wrap"><div class="intro"><p class="eyebrow" style="color:var(--orange)">Products</p><h2>A focused starting point for outdoor-lighting projects.</h2><p>Explore product directions and use them to begin a requirement-led conversation with HENLYTE.</p></div><div class="grid"><article class="card"><span class="num">01</span><h3>Road &amp; Street Lighting</h3><p>Lighting directions for roads, highways and everyday public infrastructure.</p></article><article class="card"><span class="num">02</span><h3>Solar Lighting</h3><p>Solar road-lighting concepts for projects seeking an integrated approach.</p></article><article class="card"><span class="num">03</span><h3>Light Poles &amp; Structures</h3><p>Outdoor light-pole requirements shaped around application and project context.</p></article></div></div></section>
+    <section class="band" id="solutions"><div class="wrap split"><div><p class="eyebrow" style="color:var(--orange)">Solutions</p><h2>Start with the place your project needs to serve.</h2><p class="small">The right approach depends on the application, site conditions, drawings and the requirements behind the project.</p></div><ul class="list"><li>Road &amp; Highway Lighting</li><li>Solar Road Lighting</li><li>Residential &amp; Community Lighting</li><li>Landscape &amp; Urban Lighting</li><li>Industrial Park Lighting</li><li>Stadium, Airport &amp; Port Lighting</li><li>Traffic &amp; Smart City Infrastructure</li></ul></div></section>
+    <section id="custom"><div class="wrap split"><div><p class="eyebrow" style="color:var(--orange)">OEM &amp; ODM</p><h2>Bring the drawing. Define the requirements. Build the conversation from there.</h2><p class="small">For projects that need more than a standard product listing, we can start from the specifications and context you provide.</p></div><div><div class="quote">“Share your drawing, specifications or project requirements.”</div><ul class="list"><li>Custom light-pole requirements</li><li>Custom solar-lighting concepts</li><li>Drawing-based project discussions</li><li>Material, finish and color requirements</li><li>Flange, anchor-bolt and packaging considerations</li></ul></div></div></section>
+    <section class="band" id="knowledge"><div class="wrap"><div class="intro"><p class="eyebrow" style="color:var(--orange)">Knowledge Center</p><h2>Useful questions before a project moves forward.</h2><p>Technical guidance, procurement considerations and application-led ideas will be collected here as HENLYTE develops its public resource library.</p></div></div></section>
+    <section id="about"><div class="wrap split"><div><p class="eyebrow" style="color:var(--orange)">About HENLYTE</p><h2>HENLYTE / 恒银路灯</h2></div><div><p class="small" style="font-size:18px;margin-top:0">HENLYTE is the outdoor-lighting brand presentation for Guangdong Hengyin Optoelectronic Technology Co., Ltd. This first version is designed to make it easier for project teams to begin with their actual requirements.</p></div></div></section>
+    <section class="contact" id="contact"><div class="wrap split"><div><p class="eyebrow">Contact</p><h2>Let’s start with what your project needs.</h2><p>Share your drawing, specifications or project requirements. We will use the information you provide as the starting point for the conversation.</p></div><div><a class="button" href="#home">Return to top</a></div></div></section>
+  </main>
+  <footer><div class="wrap bar"><span>© HENLYTE · 恒银路灯</span><span>Outdoor lighting for project requirements</span></div></footer>
+</body>
+</html>
