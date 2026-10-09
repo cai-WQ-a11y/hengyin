@@ -1,0 +1,15 @@
+/* Featured catalogue layout: large, editorial cards while retaining all local detail pages. */
+main{padding:28px 0 64px!important;background:linear-gradient(180deg,#f7faff 0,#fff 320px)}
+main .wrap{width:min(1480px,calc(100% - 56px))!important}
+main .wrap:before{content:"HENLYTE LIGHTING\A Project-ready poles and outdoor lighting systems";white-space:pre;display:block;padding:54px 56px;margin:0 0 46px;border-radius:16px;background:linear-gradient(110deg,rgba(5,30,76,.97),rgba(8,92,153,.78)),url("assets/placeholder-product.svg") center/cover;color:#fff;font-size:clamp(24px,3vw,42px);font-weight:800;line-height:1.25;letter-spacing:.02em;box-shadow:0 18px 40px rgba(8,42,115,.18)}
+main .wrap > h1{font-size:clamp(42px,5vw,68px)!important;letter-spacing:.04em;margin:8px 0 12px!important}
+main .wrap > p.muted{max-width:760px;font-size:18px!important;margin-bottom:30px}
+main .wrap > div[style*="display:grid"]{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important;margin-top:28px}
+main .wrap > div[style*="display:grid"]>a{display:block;min-height:500px;padding:0 24px 24px!important;border:1px solid #d7e2ef!important;border-radius:14px!important;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(8,42,115,.11);transition:transform .2s ease,box-shadow .2s ease}
+main .wrap > div[style*="display:grid"]>a:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(8,42,115,.18)}
+main .wrap > div[style*="display:grid"]>a::before{content:"";display:block;height:300px;margin:0 -24px 22px;background:#edf4fa url("assets/placeholder-product.svg") center/cover no-repeat}
+main .wrap > div[style*="display:grid"]>a:nth-child(n+10){display:none}
+main .wrap > div[style*="display:grid"]>a h2{font-size:24px!important;line-height:1.25!important;margin:10px 0 14px!important}
+main .wrap > div[style*="display:grid"]>a span{font-size:15px!important}
+@media(max-width:900px){main .wrap > div[style*="display:grid"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){main .wrap:before{padding:34px 26px;margin-bottom:30px}main .wrap > div[style*="display:grid"]{grid-template-columns:1fr!important}main .wrap > div[style*="display:grid"]>a{min-height:0}main .wrap > div[style*="display:grid"]>a::before{height:280px}}

@@ -1,0 +1,9 @@
+.grid{display:grid !important;grid-template-columns:repeat(2,minmax(0,1fr)) !important;align-items:stretch !important}
+.grid>.card{display:block !important;min-width:0 !important;width:100% !important;height:100% !important}
+.grid>.card>a{display:flex !important;flex-direction:column !important;width:100% !important;min-width:0 !important;height:100% !important}
+.grid>.card>a>figure{display:block !important;flex:0 0 280px !important;width:100% !important;height:280px !important;min-width:0 !important;min-height:0 !important;margin:0 !important;overflow:hidden !important}
+.grid>.card>a>figure>img{display:block !important;width:100% !important;height:100% !important;object-fit:cover !important}
+.grid>.card>a>.card-body{display:block !important;flex:1 1 auto !important;width:100% !important;min-width:0 !important;box-sizing:border-box !important;padding:22px 24px 24px !important}
+.grid>.card>a>.card-body h2,.grid>.card>a>.card-body p{max-width:none !important}
+@media(max-width:800px){.grid{grid-template-columns:1fr !important}}
+@media(max-width:600px){.grid>.card>a>figure{flex-basis:220px !important;height:220px !important}.grid>.card>a>.card-body{padding:22px !important}}

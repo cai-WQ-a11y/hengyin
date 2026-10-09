@@ -1,0 +1,21 @@
+/* Compact product showcase: four readable rows, no fixed blank panel. */
+.nav nav a[href="products.html"]{position:relative;z-index:21}
+.nav nav a[href="products.html"]:hover:after,
+.nav nav a[href="products.html"]:focus-visible:after{
+  content:"LIGHT POLE\A SOLAR STREET LIGHT\A LED STREET LIGHT\A HIGH MAST";
+  position:absolute;top:calc(100% + 8px);right:-34px;width:360px;height:252px;
+  padding:12px 18px 12px 78px;display:block;box-sizing:border-box;
+  background-color:#fff;
+  background-image:url('assets/concept-engineering-details.png'),url('assets/concept-solar-road-lighting.png'),url('assets/concept-road-lighting.png'),url('assets/concept-engineering-details.png');
+  background-repeat:no-repeat;
+  background-size:54px 48px,54px 48px,54px 48px,54px 48px;
+  background-position:18px 14px,18px 74px,18px 134px,18px 194px;
+  color:var(--n);font-size:13px;line-height:60px;font-weight:800;
+  letter-spacing:.05em;white-space:pre;overflow:hidden;
+  border-top:3px solid var(--o);border-radius:0 0 8px 8px;
+  box-shadow:0 16px 32px #071b4330;pointer-events:none;
+}
+@media(max-width:900px){
+  .nav nav a[href="products.html"]:hover:after,
+  .nav nav a[href="products.html"]:focus-visible:after{display:none}
+}

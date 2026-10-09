@@ -1,0 +1,84 @@
+@import url('product-mega-menu.css');
+/* Homepage product cards: give the four featured visuals a proper storefront scale. */
+#products > .w > .cards .card,
+#hot-selling > .w > .cards .card { padding: 0 0 18px; overflow: hidden; }
+#products > .w > .cards .card img,
+#hot-selling > .w > .cards .card img { display: block; width: 100%; height: 300px; object-fit: cover; }
+#products > .w > .cards .card h3,
+#products > .w > .cards .card p,
+#hot-selling > .w > .cards .card h3,
+#hot-selling > .w > .cards .card p { margin-left: 20px; margin-right: 20px; }
+@media (max-width: 900px) {
+  #products > .w > .cards .card img,
+  #hot-selling > .w > .cards .card img { height: 270px; }
+}
+
+/* Western B2B supplier direction: wide whitespace, quiet chrome, clear CTA. */
+:root{--n:#082f63;--b:#0b78c8;--o:#f6a015;--i:#12233d;--m:#61728a;--l:#dce5ef}
+.w{width:min(1380px,calc(100% - 64px))}.top{background:#f7f9fc;color:#24466f;border-bottom:1px solid #e4ebf3;padding:7px 0;font-size:12px}.head{background:#fff;box-shadow:0 3px 18px #062b5512}.nav{min-height:82px}.brand-logo{width:116px;height:58px}.nav nav{gap:27px;font-size:13px;text-transform:uppercase;letter-spacing:.02em}.nav nav a:not(.btn){color:#16365d}.nav nav a:not(.btn):hover{color:var(--o)}.btn{border-radius:2px;text-transform:uppercase;letter-spacing:.03em}.hero{min-height:clamp(680px,82vh,900px);background:linear-gradient(90deg,#04162ff2 0%,#062f61c9 48%,#062f6120 100%),url('assets/concept-road-lighting.png') center/cover}.hero .w{padding:115px 0}.hero h1{font-size:clamp(48px,6.6vw,86px);max-width:820px;letter-spacing:-.035em}.hero p{font-size:21px;max-width:650px;color:#e5eff9}.sec{padding:102px 0}.lead{max-width:820px}.ey{letter-spacing:.18em}.lead h2,h2{font-weight:850;letter-spacing:-.025em}.cards{gap:22px}.card{border-radius:2px;padding:22px;box-shadow:0 10px 32px #0a31500d;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #0a31501b}.card img{height:220px;object-fit:cover}.card h3{font-size:20px}.alt{background:#f5f8fb}.sol div{border-radius:2px}.oem{background:linear-gradient(110deg,#052757,#087cc7)}footer{background:linear-gradient(135deg,#03152fee,#073b72ee),url('assets/concept-road-lighting.png') center/cover}.footer-logo{width:120px;height:58px}
+@media(max-width:900px){.w{width:min(100% - 36px,720px)}.hero{min-height:560px}.hero .w{padding:80px 0}.nav nav{gap:12px}.nav nav a:not(.btn){display:none}.cards,.sol{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.top .w{display:block}.w{width:calc(100% - 28px)}.brand-logo{width:88px;height:50px}.hero h1{font-size:44px}.cards,.sol,.split,footer .cols{grid-template-columns:1fr}.card img{height:240px}.sec{padding:68px 0}}
+@media (max-width: 620px) {
+  #products > .w > .cards .card img,
+  #hot-selling > .w > .cards .card img { height: 240px; }
+}
+
+/* Hot-selling block: four large, quiet cards matching the supplied reference. */
+#hot-selling { background: #fff; padding: 92px 0 64px; }
+#hot-selling > .w > .lead { max-width: none; text-align: center; }
+#hot-selling > .w > .lead h2 { color: #123d78; margin: 8px 0 12px; }
+#hot-selling > .w > .lead p { color: #61728a; }
+#hot-selling > .w > .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 34px; }
+#hot-selling > .w > .cards .card { background: #f1f3f6; border: 0; border-radius: 6px; padding: 22px 20px 22px; box-shadow: none; }
+#hot-selling > .w > .cards .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px #092d551c; }
+#hot-selling > .w > .cards .card a { display: block; }
+#hot-selling > .w > .cards .card img { height: 280px; object-fit: contain; background: #fff; margin: 56px 0 18px; }
+#hot-selling > .w > .cards .card h3 { margin: 0 0 12px; color: #111; font-size: 20px; }
+#hot-selling > .w > .cards .card p { margin: 0; color: #61728a; }
+#hot-selling + .oem { background: #123d78; color: #fff; }
+@media (max-width: 900px) {
+  #hot-selling > .w > .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  #hot-selling { padding: 68px 0 48px; }
+  #hot-selling > .w > .cards { grid-template-columns: 1fr; }
+  #hot-selling > .w > .cards .card img { height: 240px; margin-top: 28px; }
+}
+
+/* Certificate area: larger presentation while keeping all claims as placeholders. */
+#certificates { padding: 112px 0 120px; background: #fff; }
+#certificates > .w > .lead { max-width: 820px; margin: 0 auto; text-align: center; }
+#certificates > .w > .lead h2 { font-size: clamp(38px, 5vw, 58px); margin: 12px 0 16px; }
+#certificates > .w > .lead p { font-size: 18px; }
+#certificates > .w > .cards { gap: 22px; margin-top: 46px; }
+#certificates > .w > .cards .card { min-height: 235px; padding: 34px 30px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 14px 35px #082a7312; }
+#certificates > .w > .cards .card h3 { font-size: 24px; margin: 0 0 16px; }
+#certificates > .w > .cards .card p { font-size: 17px; margin: 0; }
+@media (max-width: 900px) { #certificates { padding: 88px 0; } #certificates > .w > .cards { gap: 16px; } }
+@media (max-width: 620px) { #certificates { padding: 68px 0 76px; } #certificates > .w > .cards { margin-top: 30px; } #certificates > .w > .cards .card { min-height: 180px; padding: 26px 22px; } #certificates > .w > .cards .card h3 { font-size: 21px; } }
+
+/* Header scale: match the customer site's stronger desktop masthead. */
+.head .nav { min-height: 96px; }
+.brand-logo { width: 168px; height: 76px; object-fit: cover; object-position: center; }
+.nav nav { gap: 28px; font-size: 17px; }
+.top { padding: 11px 0; font-size: 14px; }
+@media (max-width: 900px) {
+  .nav nav { gap: 16px; font-size: 15px; }
+}
+@media (max-width: 620px) {
+  .head .nav { min-height: 76px; }
+  .brand-logo { width: 118px; height: 58px; }
+  .nav nav { gap: 10px; font-size: 14px; }
+}
+
+/* Customer-IP parity: keep the homepage chrome visibly enterprise-oriented. */
+.top .w span:last-child::before { content: "☎ "; color: var(--o); }
+.hero::after { content: "01   02   03   04"; position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); color: #fff; letter-spacing: .5em; font-size: 11px; opacity: .85; }
+.hero { position: relative; }
+
+/* Keep only confirmed channels and soften the floating rail. */
+.rail { border-radius: 14px 0 0 14px; overflow: hidden; }
+.rail a:first-child { display: none; }
+.rail a { transition: background .2s ease; }
+.rail a:hover { background: #f4f7fb; }
+@media (max-width: 620px) { .rail { border-radius: 14px 14px 0 0; } }
