@@ -18,6 +18,21 @@
 .w{width:min(1380px,calc(100% - 64px))}.top{background:#f7f9fc;color:#24466f;border-bottom:1px solid #e4ebf3;padding:7px 0;font-size:12px}.head{background:#fff;box-shadow:0 3px 18px #062b5512}.nav{min-height:82px}.brand-logo{width:116px;height:58px}.nav nav{gap:27px;font-size:13px;text-transform:uppercase;letter-spacing:.02em}.nav nav a:not(.btn){color:#16365d}.nav nav a:not(.btn):hover{color:var(--o)}.btn{border-radius:2px;text-transform:uppercase;letter-spacing:.03em}.hero{min-height:clamp(680px,82vh,900px);background:linear-gradient(90deg,#04162ff2 0%,#062f61c9 48%,#062f6120 100%),url('assets/concept-road-lighting.png') center/cover}.hero .w{padding:115px 0}.hero h1{font-size:clamp(48px,6.6vw,86px);max-width:820px;letter-spacing:-.035em}.hero p{font-size:21px;max-width:650px;color:#e5eff9}.sec{padding:102px 0}.lead{max-width:820px}.ey{letter-spacing:.18em}.lead h2,h2{font-weight:850;letter-spacing:-.025em}.cards{gap:22px}.card{border-radius:2px;padding:22px;box-shadow:0 10px 32px #0a31500d;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #0a31501b}.card img{height:220px;object-fit:cover}.card h3{font-size:20px}.alt{background:#f5f8fb}.sol div{border-radius:2px}.oem{background:linear-gradient(110deg,#052757,#087cc7)}footer{background:linear-gradient(135deg,#03152fee,#073b72ee),url('assets/concept-road-lighting.png') center/cover}.footer-logo{width:120px;height:58px}
 @media(max-width:900px){.w{width:min(100% - 36px,720px)}.hero{min-height:560px}.hero .w{padding:80px 0}.nav nav{gap:12px}.nav nav a:not(.btn){display:none}.cards,.sol{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.top .w{display:block}.w{width:calc(100% - 28px)}.brand-logo{width:88px;height:50px}.hero h1{font-size:44px}.cards,.sol,.split,footer .cols{grid-template-columns:1fr}.card img{height:240px}.sec{padding:68px 0}}
+
+/* Keep the existing static links, but present the reference-site navigation labels. */
+@media(min-width:901px){
+  .head .nav nav{gap:24px;white-space:nowrap}
+  .head .nav nav>a{font-size:0}
+  .head .nav nav>a::after{font-size:15px;font-weight:700}
+  .head .nav nav>a:nth-child(1)::after{content:'Home'}
+  .head .nav nav>a:nth-child(2)::after{content:'About Us⌄'}
+  .head .nav nav>a:nth-child(3)::after{content:'Products⌄'}
+  .head .nav nav>a:nth-child(4)::after{content:'News'}
+  .head .nav nav>a:nth-child(5)::after{content:'Blog'}
+  .head .nav nav>a:nth-child(6)::after{content:'Contact Us'}
+  .head .nav nav>a:nth-child(7)::after{content:'Solution⌄'}
+  .head .nav nav::after{content:'Request A Quote   VR   ⌕';font-size:15px;font-weight:700;color:#16365d;white-space:pre}
+}
 @media (max-width: 620px) {
   #products > .w > .cards .card img,
   #hot-selling > .w > .cards .card img { height: 240px; }
@@ -82,3 +97,94 @@
 .rail a { transition: background .2s ease; }
 .rail a:hover { background: #f4f7fb; }
 @media (max-width: 620px) { .rail { border-radius: 14px 14px 0 0; } }
+
+/* Carousel controls: quiet clickable lines instead of visible numbers. */
+.hero::after { content: none; }
+.hero-dots { display: flex; gap: 12px; margin-top: 28px; }
+.hero-dots button { width: 34px; height: 3px; border: 0; border-radius: 999px; background: #ffffff80; padding: 0; font-size: 0; line-height: 0; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+.hero-dots button:hover { background: #fff; transform: scaleY(1.5); }
+.hero-dots button[aria-current="true"] { background: var(--o); }
+@media (max-width: 620px) { .hero-dots { gap: 8px; margin-top: 20px; } .hero-dots button { width: 28px; } }
+
+/* Refined independent-site product cards: softer surfaces, cleaner rhythm, stronger hover feedback. */
+#products > .w > .cards,
+#hot-selling > .w > .cards { gap: 24px; }
+#products > .w > .cards .card,
+#hot-selling > .w > .cards .card {
+  border: 1px solid #e1e8f0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(8, 47, 99, .08);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+#products > .w > .cards .card:hover,
+#hot-selling > .w > .cards .card:hover {
+  transform: translateY(-8px);
+  border-color: #bfd3e8;
+  box-shadow: 0 20px 42px rgba(8, 47, 99, .16);
+}
+#products > .w > .cards .card img,
+#hot-selling > .w > .cards .card img {
+  border-radius: 13px 13px 0 0;
+  background: #f4f7fa;
+}
+#products > .w > .cards .card h3,
+#hot-selling > .w > .cards .card h3 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #092e61;
+  font-size: clamp(19px, 1.45vw, 24px);
+  line-height: 1.25;
+}
+#products > .w > .cards .card p,
+#hot-selling > .w > .cards .card p {
+  margin-bottom: 8px;
+  color: #657a95;
+  font-size: 15px;
+}
+#products > .w > p .btn,
+#hot-selling > .w > p .btn {
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(246, 160, 21, .2);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+#products > .w > p .btn:hover,
+#hot-selling > .w > p .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(246, 160, 21, .3); }
+@media (max-width: 620px) {
+  #products > .w > .cards,
+  #hot-selling > .w > .cards { gap: 18px; }
+  #products > .w > .cards .card h3,
+  #hot-selling > .w > .cards .card h3 { font-size: 20px; }
+}
+
+/* Final homepage scale pass: the customer IP uses wide, image-led sections. */
+body > main .w { width: min(1480px, calc(100% - 64px)); }
+body > main .sec { padding-top: 118px; padding-bottom: 118px; }
+body > main #products > .w > .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+body > main #products > .w > .cards .card { min-height: 430px; padding-bottom: 26px; }
+body > main #products > .w > .cards .card img { height: 330px; }
+body > main #hot-selling > .w > .cards .card img { height: 330px; margin-top: 32px; }
+body > main #hot-selling > .w > .cards .card { min-height: 490px; }
+body > main #certificates { padding-top: 130px; padding-bottom: 140px; }
+body > main #certificates > .w > .cards .card { min-height: 270px; }
+body > main #oem { padding-top: 140px; padding-bottom: 140px; }
+body > main #oem .visual { min-height: 580px; }
+body > main #news { padding-top: 130px; padding-bottom: 130px; }
+body > main #news > .w > .cards .card { min-height: 190px; padding: 28px; }
+@media (max-width: 900px) {
+  body > main .w { width: min(100% - 40px, 720px); }
+  body > main .sec { padding-top: 88px; padding-bottom: 88px; }
+  body > main #products > .w > .cards .card img,
+  body > main #hot-selling > .w > .cards .card img { height: 270px; }
+  body > main #products > .w > .cards .card,
+  body > main #hot-selling > .w > .cards .card { min-height: 390px; }
+}
+@media (max-width: 620px) {
+  body > main .w { width: calc(100% - 28px); }
+  body > main .sec, body > main #certificates, body > main #oem, body > main #news { padding-top: 72px; padding-bottom: 72px; }
+  body > main #products > .w > .cards .card img,
+  body > main #hot-selling > .w > .cards .card img { height: 240px; }
+  body > main #products > .w > .cards .card,
+  body > main #hot-selling > .w > .cards .card { min-height: 0; }
+  body > main #oem .visual { min-height: 330px; }
+}

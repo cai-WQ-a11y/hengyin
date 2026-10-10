@@ -37,6 +37,10 @@ const server = http.createServer((req, res) => {
     fs.readFile(file, (readError, data) => {
       if (readError) return send(res, 500, 'Internal server error');
       res.writeHead(200, { 'Content-Type': types[path.extname(file).toLowerCase()] || 'application/octet-stream' });
+      if (path.extname(file).toLowerCase() === '.html') {
+        const html = data.toString();
+        data = Buffer.from(html.replace('</head>', '<link rel="stylesheet" href="/nav-unified.css"><script src="/nav-upgrade.js"></script></head>'));
+      }
       res.end(data);
     });
   });
